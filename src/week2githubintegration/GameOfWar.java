@@ -109,14 +109,25 @@ public class GameOfWar {
          
          Card p1Card = p1Hand.remove(0);
          Card p2Card = p2Hand.remove(0);
-         
+         //if player 1 wins
          if(p1Card.getFaceValue() > p2Card.getFaceValue())
          {
              p1Hand.addAll(warPile);
              p1Hand.add(p1Card);
              p1Hand.add(p2Card);
          }
-         
-         
-    }
-}
+         //if player 2 wins
+         if(p2Card.getFaceValue() > p1Card.getFaceValue())
+         {
+             p2Hand.addAll(warPile);
+             p2Hand.add(p1Card);
+             p2Hand.add(p2Card);
+         }
+         else
+         {
+             warPile.add(p1Card);
+             warPile.add(p2Card);
+             this.playWarHand(warPile);       
+         }
+     }// end of the method playWarHand
+} //end of the class

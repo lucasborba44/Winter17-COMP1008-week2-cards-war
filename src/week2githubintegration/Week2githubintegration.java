@@ -3,7 +3,7 @@ package week2githubintegration;
 
 /**
  *
- * @author Lucas Borba 200352679
+ * @author Lucas Borba 
  */
 public class Week2githubintegration {
 

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Lucas Borba 200352679
+ * @author Lucas Borba 
  */
 public class GameOfWar {
    private ArrayList<Card> p1Hand;

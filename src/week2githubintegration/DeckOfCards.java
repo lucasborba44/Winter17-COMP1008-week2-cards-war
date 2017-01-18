@@ -26,6 +26,14 @@ public class DeckOfCards {
          }
         }
     }
+    /**
+     * This shuffles the deck of cards
+     */
+    public void shuffle()
+    {
+        Collections.shuffle(deck);
+    }
+    
     
     /**
      * This will return a Sting representing the eck of cards
@@ -41,21 +49,15 @@ public class DeckOfCards {
         }
         return deckString;
     }
-    /**
-     * This method will shuffle the deck of cards
-     */
-    public void shuffle(){
-        Collections.shuffle(deck);
-    }
+    
     /**
      * This method will deal the top card off the deck
      */
-    
     public Card dealTopCard ()
     {
-        if (deck.isEmpty())
-            return null;
-        else
+        if (deck.size()>0)
             return deck.remove(0);
+        else
+            return null;
     }
 }
